@@ -1,0 +1,15 @@
+.User {
+    display: flex;
+    place-content: center;
+    margin: 20px 0;
+}
+
+.User img {
+    border-radius: 50%;
+    width: 100px;
+    margin-right: 20px;
+}
+
+.User h3 {
+    align-self: center;
+}

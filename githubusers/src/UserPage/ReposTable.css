@@ -1,0 +1,23 @@
+.ReposTable table {
+    margin: 0 auto;
+}
+
+.ReposTable table tbody tr {
+    height: 40px;
+}
+
+.ReposTable table tbody tr td {
+    padding: 0 25px;
+}
+
+table tr:nth-child(even) {
+    background: #F7F6FF;
+}
+
+table tr:first-child {
+    background: #FFF;
+}
+
+table {
+    border-collapse: collapse;
+}

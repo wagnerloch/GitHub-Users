@@ -1,0 +1,20 @@
+.UserPage .UserInfo {
+    margin-top: 50px;
+}
+
+.UserPage .UserInfo img {
+    border-radius: 50%;
+    width: 200px;
+}
+
+.UserPage .ReturnHome {
+    margin-top: 50px;
+}
+
+.UserPage .ReturnHome img {
+    width: 50px;
+}
+
+.UserPage .ReturnHome p {
+    margin: 0 0 30px 0;
+}
