@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './HomePage.css'
-import Header from '../Header/Header'
+import Header from './Header'
 import User from './User'
 import DataUsers from '../Data/DataUsers'
 
@@ -20,7 +20,7 @@ const HomePage = props => {
     const updateList = useCallback(async (lastId) => {
         let list = await DataUsers.getUsers(lastId)
         setUsersList(list)
-    }, [usersList])
+    }, [])
 
     return (
         <div className="HomePage">
@@ -34,7 +34,7 @@ const HomePage = props => {
                     </Link>
                 ))}
             </div>
-            <div>
+            <div className="NavButtons">
                 <button onClick={() => {
                     updateList(0)
                 }}>First Page</button>

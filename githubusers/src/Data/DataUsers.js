@@ -6,14 +6,22 @@ const basicFetch = async (endpoint) => {
     return json
 }
 
-export default {
-    getUsers : async (lastId) => {
-        return await basicFetch(`/users?per_page=5&since=${lastId}`)       
-    },
-    getUserInfo : async (username) => {
-        return await basicFetch(`/users/${username}`)
-    },
-    getPublicRepos : async (username) => {
-        return await basicFetch(`/users/${username}/repos`)
-    }
+const getUsers = async (lastId) => {
+    return await basicFetch(`/users?per_page=5&since=${lastId}`)       
 }
+
+const getUserInfo = async (username) => {
+    return await basicFetch(`/users/${username}`)
+}
+
+const getPublicRepos = async (username) => {
+    return await basicFetch(`/users/${username}/repos`)
+}
+
+const publicFunctions = {
+    getUsers,
+    getUserInfo,
+    getPublicRepos
+}
+
+export default publicFunctions

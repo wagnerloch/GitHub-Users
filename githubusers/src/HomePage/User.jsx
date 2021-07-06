@@ -3,7 +3,7 @@ import './User.css'
 
 const User = props =>
     <div className="User">
-        <img src={props.avatar} alt="User1" />
+        <img src={props.avatar} alt={`User-${props.id}`} />
         <div>
             <h3>{props.children}</h3>
             <p>ID: {props.id}</p>

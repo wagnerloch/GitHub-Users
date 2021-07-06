@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import './UserPage.css'
 import { useParams } from 'react-router'
 import DataUsers from '../Data/DataUsers'
-import ReposTable from './ReposTable'
 import HomeIcon from '../assets/home.png'
+import UserInfos from './UserInfos'
 
 const UserPage = props => {
     const { username } = useParams()
@@ -18,19 +18,11 @@ const UserPage = props => {
             setUserRepos(repos)
         }
         loadUserData();
-    }, [])
+    }, [username])
 
     return (
         <div className="UserPage">
-            <div className="UserInfo">
-                <img src={userData.avatar_url} alt={userData.login} />
-                <h2>{userData.id}</h2>
-                <h1>{userData.login}</h1>
-                <h2>{userData.name}</h2>
-                <a target="_blank" href={userData.html_url}>Profile URL</a>
-                <p>GitHub user since {userData.created_at}</p>
-                <ReposTable repos={userRepos}></ReposTable>
-            </div>
+            <UserInfos userData={userData} userRepos={userRepos}></UserInfos>            
             <div className="ReturnHome">
                 <a href="/">
                     <img src={HomeIcon} alt="Home Icon" />
